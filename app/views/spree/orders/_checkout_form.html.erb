@@ -7,7 +7,7 @@
   <div class="columns alpha eight" data-hook="billing_fieldset_wrapper">
     <fieldset id="billing" data-hook>
       <legend align="center"><%= t(:billing_address) %></legend>
-      <% unless user_signed_in? %>
+      <% unless spree_user_signed_in? %>
         <%= form.label :email %><br />
         <%= form.text_field :email, :class => 'required' %>
       <% end %>
